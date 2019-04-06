@@ -36,6 +36,8 @@ type MyPrefabData<B> = (
     Option<AnimationSetPrefab<AnimationId, Transform>>,
 );
 
+const CLEAR_COLOR: [f32; 4] = [0.0, 0.0, 0.0, 1.0];
+
 #[derive(Eq, PartialOrd, PartialEq, Hash, Debug, Copy, Clone, Deserialize, Serialize)]
 enum AnimationId {
     Scale,
@@ -326,7 +328,7 @@ impl<B: Backend> GraphCreator<B> for ExampleGraph {
             1,
             factory.get_surface_format(&surface),
             MemoryUsageValue::Data,
-            Some(ClearValue::Color([1.0, 1.0, 1.0, 1.0].into())),
+            Some(ClearValue::Color(CLEAR_COLOR.into())),
         );
 
         let depth = graph_builder.create_image(
