@@ -192,7 +192,7 @@ impl<B: Backend> SimpleState for Example<B> {
 fn run<B: Backend>() -> amethyst::Result<()> {
     amethyst::Logger::from_config(amethyst::LoggerConfig {
         log_file: Some("animation_example.log".into()),
-        level_filter: log::LevelFilter::Trace,
+        level_filter: log::LevelFilter::Debug,
         ..Default::default()
     }).start();
 
