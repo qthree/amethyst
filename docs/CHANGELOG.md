@@ -62,6 +62,12 @@ extra bounds from `AnimatablePrefab` and `AnimationSetPrefab` ([#1435])
 * `amethyst_test` includes the application name of a failing test. ([#1499])
 * `amethyst_test` returns the panic message of a failed execution. ([#1499])
 
+#### Rendy support
+
+* `camera::Projection::perspective()` now returns a vulkan specific perspective matrix ([#1504])
+
+[#1504]: https://github.com/amethyst/amethyst/pull/1504
+
 ### Removed
 
 ### Fixed
